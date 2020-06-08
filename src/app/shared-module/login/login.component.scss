@@ -1,0 +1,27 @@
+.btn-headup {
+  border: none;
+  background-color: #fff;
+
+  &:hover {
+    transition: all 300ms;
+    cursor: pointer;
+    color: rgb(59, 132, 226);
+  }
+}
+
+.login-form {
+  // border: 1px solid red;
+  width: 50%;
+
+  .regulations {
+    color: #555;
+    color: rgb(59, 132, 226);
+
+    &:hover {
+      transition: all 300ms;
+      // text-shadow: 1px 1px 1px #555;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}

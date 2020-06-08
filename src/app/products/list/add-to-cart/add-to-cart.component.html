@@ -1,0 +1,14 @@
+<div class="container-cart">
+  <div class="row-cart row-cart-add-subtract">
+    <button class="btn-subtract" (click)="subtract()"><span>-</span></button>
+    <span class="products-qty">{{qty}}</span>
+    <button class="btn-add" (click)="add()">+</button>
+  </div>
+  <div class="row-cart">
+    <button class="btn-add-to-cart" (click)="addToCart()">Dodaj do koszyka</button>
+  </div>
+  <div class="row-cart row-cart-qty">
+    <!-- <span>Koszyk: {{productQty}}</span> -->
+    <span>Koszyk: <input type="text" name="product-qty" [value]="productQty" (change)="onChangeValue($event)"></span>
+  </div>
+</div>

@@ -1,0 +1,32 @@
+@import './variables';
+
+@mixin btn-subtract-add {
+  border: 1px solid $btn-border-color;
+  width: $btn-width;
+  height: $btn-height;
+  // margin: 5px;
+  background-color: $btn-background-color;
+  color: $btn-font-color;
+
+  &:hover {
+    transition: all 300ms linear;
+    background-color: $btn-background-color-hover;
+    color: $btn-font-color-hover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(87, 72, 72, 0.19);
+  }
+}
+
+@mixin btn-add-to-cart {
+  border: 1px solid $btn-border-color;
+  background-color: $btn-background-color;
+  color: $btn-font-color;
+  height: $btn-height;
+  width: $btn-width * 5;
+
+  &:hover {
+    transition: all 300ms linear;
+    background-color: $btn-background-color-hover;
+    color: $btn-font-color-hover;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}

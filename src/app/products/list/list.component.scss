@@ -1,0 +1,47 @@
+thead {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+th {
+  cursor: pointer;
+}
+
+tbody tr td:nth-child(1) {
+  width: 10%;
+}
+
+tbody tr td:nth-child(2) {
+  width: 35%;
+}
+
+tbody tr td:nth-child(3) {
+  width: 10%;
+}
+
+tbody tr td:nth-child(4) {
+  width: 10%;
+}
+
+tbody tr td:nth-child(5) {
+  width: 10%;
+  text-align: right;
+}
+
+tbody tr td:last-child {
+  width: 25%;
+}
+
+.btn-large {
+  border: 1px solid #555;
+  background-color: #555;
+  color: white;
+  padding: 10px 20px;
+
+  &:hover {
+    transition: all 300ms;
+    background-color: #fff;
+    color: #555;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}

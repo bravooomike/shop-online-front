@@ -1,0 +1,74 @@
+<app-header>
+  <button class="btn-headup" login [routerLink]="['/login']">Zaloguj się</button>
+  <h3 level>Koszyk</h3>
+</app-header>
+<div class="container-fluid">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h5>Lista produktów w koszyku ({{cartPositions.length}})</h5>
+    </div>
+    <div class="col-md-6 text-right">
+      <button class="btn-large" [routerLink]="['/products']">Wróć do listy produktów</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12">
+      <table class="table table-bordered table-hover table-cart">
+        <thead class="thead-dark">
+          <tr>
+            <th>marka</th>
+            <th>nazwa produktu</th>
+            <th>typ produktu</th>
+            <th>płeć</th>
+            <th>ilość</th>
+            <th>cena</th>
+            <th>wartość</th>
+            <th>akcje</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of cartPositions">
+            <td> {{ product.getBrand() | firstLetterUppercase}} </td>
+            <td> {{ product.getName() }} </td>
+            <td> {{ product.getTypeCode() | productTypeCode}} </td>
+            <td> {{ product.getGender() | firstLetterUppercase}} </td>
+            <td> {{ product.getQty() }} </td>
+            <td> {{ product.getPrice()| currency}} </td>
+            <td> {{ product.calculateProductTotalValue() | currency}} </td>
+            <td><button class="btn-small" (click)="deleteFromCart(product.getId())">usuń</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row text-right">
+    <div class="col-sm-12">
+      <h5>
+        <table class="table table-bordered table-order-total-value">
+          <tr>
+            <td>Całkowita wartość zamówienia</td>
+            <td>{{ orderTotalValue | currency}}</td>
+          </tr>
+          <tr>
+            <td>
+              <label for="delivery-method">Wybierz formę dostawy</label>
+            </td>
+            <td>
+              <select id="delivery-method" [(ngModel)]="deliveryType">
+                <option selected [ngValue]="'odbi'">Odbiór własny</option>
+                <option [ngValue]="'kuri'">Kurier</option>
+                <option [ngValue]="'pacz'">Paczkomat</option>
+                <option [ngValue]="'pocz'">Poczta</option>
+              </select>
+            </td>
+          </tr>
+        </table>
+      </h5>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-sm-12 text-right">
+      <button class="btn-large" (click)="order()">Zamawiam</button>
+    </div>
+  </div>
+</div>

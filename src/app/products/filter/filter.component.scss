@@ -1,0 +1,64 @@
+input[type=text] {
+  width: 80%;
+  margin-left: 10px;
+}
+
+.label-checkbox {
+  position: relative;
+  padding: 0 0 0 40px;
+  cursor: pointer;
+  color: #555;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked~span {
+      background-color: #fff;
+    }
+
+    &:checked~span::after {
+      display: block;
+    }
+  }
+
+  span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 25px;
+    height: 25px;
+    background-color: #f7f7f7;
+    border: 1px solid #eee;
+    transition: all .2s ease;
+
+    &::after {
+      content: "";
+      position: absolute;
+      display: none;
+
+      // pozycjonowanie ptaka :)
+      left: 10px;
+      top: -8px;
+
+      // rysowanie ptaka :)
+      width: 10px;
+      height: 28px;
+      border-width: 0px 6px 6px 0px;
+
+      border-style: solid;
+      border-color: #333;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+  }
+
+  &:hover span {
+    background-color: #e6e6e6;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+}

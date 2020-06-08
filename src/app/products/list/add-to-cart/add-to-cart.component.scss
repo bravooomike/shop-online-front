@@ -1,0 +1,31 @@
+.container-cart {
+  display: flex;
+  justify-content: center;
+}
+
+.products-qty,
+.row-cart {
+  margin: 0 5px;
+}
+
+.products-qty {
+  width: 20px;
+  text-align: center;
+}
+
+.row-cart-add-subtract,
+.row-cart-qty {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+}
+
+.row-cart-qty {
+  display: flex;
+  justify-content: flex-start;
+}
+
+input[name="product-qty"] {
+  width: 40px;
+  text-align: center;
+}

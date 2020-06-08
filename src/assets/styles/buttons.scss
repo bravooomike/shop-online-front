@@ -1,0 +1,14 @@
+@import './mixins';
+
+.btn-subtract,
+.btn-add {
+  @include btn-subtract-add();
+}
+
+.btn-add {
+  // margin-left: 5px;
+}
+
+.btn-add-to-cart {
+  @include btn-add-to-cart();
+}

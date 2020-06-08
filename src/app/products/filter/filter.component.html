@@ -1,0 +1,15 @@
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-6 col-sm-12">
+      <label for="input-text">Filtrowanie: </label>
+      <input type="text" id="input-text" [(ngModel)]="value" (ngModelChange)="emitValue()"
+        placeholder="Wpisz szukaną frazę">
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <label for="checkbox" class="label-checkbox">Pokaż produkty w koszyku
+        <input type="checkbox" name="checkbox" id="checkbox" [(ngModel)]="isChecked" (ngModelChange)="emitCheck()">
+        <span></span>
+      </label>
+    </div>
+  </div>
+</div>

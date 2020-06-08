@@ -1,0 +1,10 @@
+.btn-headup {
+  border: none;
+  background-color: #fff;
+
+  &:hover {
+    transition: all 300ms;
+    cursor: pointer;
+    color: rgb(59, 132, 226);
+  }
+}

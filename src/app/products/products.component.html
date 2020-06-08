@@ -1,0 +1,6 @@
+<app-header>
+  <button class="btn-headup" login [routerLink]="['/login']">Zaloguj się</button>
+  <h3 level>Lista produktów</h3>
+</app-header>
+<app-filter (changedValue)="onChangedValue($event)" (changedCheck)="onChangedCheck($event)"></app-filter>
+<app-list #list></app-list>
